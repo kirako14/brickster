@@ -6,7 +6,7 @@
 Brickster is a easy and Simple Brick-hill API Wrapper made in C#-
 
 ## Download Brickster
-https://www.nuget.org/packages/Brickster/1.0.0#
+https://www.nuget.org/packages/Brickster/1.0.3#
 
 ![Nuget](https://img.shields.io/nuget/dt/Brickster?color=%23ff&label=Downloads&logo=C&logoColor=%23fff&style=plastic)
 
