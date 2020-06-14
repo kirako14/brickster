@@ -1,3 +1,4 @@
+
 # Brickster!
 
 Brickster is a easy and Simple Brick-hill API Wrapper made in C#-
@@ -12,11 +13,11 @@ https://www.nuget.org/packages/Brickster/1.0.0#
 
 Documentation files made by Edge.
 
- - Brickster. V1 .User
- - Brickster. V1 .Shop
- - Brickster. V1 .Clan
- - Brickster. BHT .BHT
- - Brickster. V1 .Games
+ - user
+ - Shop
+ - clan
+ - games
+ - Brick Hill Trade
 
 **Note:** Documentation is still in development as the creator of brickster is adding features. Right now only User, Shop, and clan variables are working. Everytime the creator implements more classes and functions they will be added to the docs right away. Open an issue if you find a typo or a error!
 ### Starting the variables:
@@ -37,6 +38,14 @@ Clan cln = new Clan();
 ```
 
 ---
+### User Filter Arguments.
+```csharp
+public string username {set; get;}
+public string id {set; get;}
+public string last_online {set; get;}
+public string created_at {set; get;}
+public string img {set; get;}
+```
 ### User Functions
 
 UserDetails
@@ -45,12 +54,6 @@ UserDetails
    ```
 Get the Users Details trough their User ID and a Filtrer.
 Filtrer Usages:
-
- - username
- - id
- - last_online
- - created_at
- - img
 
 Example of Usage:
 
@@ -70,10 +73,6 @@ ToUsername
    public string ToUsername(int userId)
    ```
 Get the Username Attached to the UserId.
-Filtrer Usages:
-
- - id
-
 
 Example of Usage:
 
@@ -95,7 +94,6 @@ ToId
 Get the UserId Attached to that username.
 Filtrer Usages:
 
- - username
 
 
 Example of Usage:
@@ -111,16 +109,24 @@ Output
 
 ---
 ### Shop Functions
+#### Filter Arguments:
+```csharp
+public string name { get; set; }
+public string description { get; set; } 
+public string bits { get; set; }
+public string bucks { get; set; }  
+public string id { get; set; }
+public bool is_special { get; set; }
+public bool special_edition { get; set; } 
+public bool special { get; set; } 
+public string thumbnail { get; set; }
 
+```
+#### Shop Functions: 
 GetLatest
   ```csharp
    public string GetLatest(string itemFilter, string detailFilter)
    ```
-Get the latest item filtered.
-Filtrer Usages:
-
- - ItemFilter -- "shirt", "pants", "tool", "tshirt", "hat".
- - detailFilter -- "bits", "bucks", "name"
 
 
 Example of Usage:
@@ -170,7 +176,15 @@ Clan Name: Choco Gang
 Clan Tag: CHC
 Clan Creation Date: 06/12/2020
 ```
-
+## Brick Hill Trade API
+#### Brick Hill Trade Filter Arguments:
+```csharp
+public string value { get;  set; } 
+public string average { get;  set; } 
+public string rank { get;  set; } 
+public string specials { get;  set; }
+```
+### Functions of Brick Hill Trade API.
 
 ---
 # Credits
