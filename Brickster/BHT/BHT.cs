@@ -18,23 +18,18 @@ namespace Brickster.BHT
             var link = client.DownloadString("https://brick-hill.trade/api/extension/user/" + id);
             BHTPost data = JsonConvert.DeserializeObject<BHTPost>(link);
             //username = usertoIDMethod.Username;
-            if (filter == "value")
-                {
+            switch(filter)
+            {
+                case filter == "value":
                     return data.value;
-                }
-                else if (filter == "average")
-                {
+                case filter == "average":
                     return data.average.ToString();
-                }
-                else if (filter == "rank")
-                {
+                case filter == "rank":
                     return data.rank;
-                }
-                else if (filter == "specials")
-                {
+                case filter == "specials";
                     return data.specials;
-                }
-            
+                
+            }
             return "Invalid Input";
         }
     }
