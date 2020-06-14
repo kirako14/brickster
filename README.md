@@ -37,6 +37,13 @@ Clan variable:
 Clan cln = new Clan();
 ```
 
+It's also required to install the Newtonsoft.Json NuGet package.
+https://www.nuget.org/packages/Newtonsoft.Json/
+Once installed you should be able to add this at the top of your code:
+```csharp
+using using Newtonsoft.Json;
+```
+
 ---
 ### User Filter Arguments.
 ```csharp
