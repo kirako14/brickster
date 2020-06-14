@@ -20,13 +20,13 @@ namespace Brickster.BHT
             //username = usertoIDMethod.Username;
             switch(filter)
             {
-                case filter == "value":
+                case "value":
                     return data.value;
-                case filter == "average":
+                case "average":
                     return data.average.ToString();
-                case filter == "rank":
+                case "rank":
                     return data.rank;
-                case filter == "specials";
+                case "specials";
                     return data.specials;
                 
             }
