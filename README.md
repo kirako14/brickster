@@ -1,3 +1,5 @@
+![alt text](https://media.discordapp.net/attachments/719985228805832744/721704602600210501/unknown.png)
+
 
 # Brickster!
 
@@ -154,6 +156,14 @@ Latest Shirt Uploaded:
 30 Bits
 ```
 ---
+### Clan Arguments
+```csharp
+public string id {get; set;}
+public string name {get; set;}
+public string tag {get; set;}
+public string creationdate {get; set;}
+public string title {get; set;}
+```
 ### Clan Functions
 ClanInfo
   ```csharp
