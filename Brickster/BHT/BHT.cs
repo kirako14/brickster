@@ -11,30 +11,25 @@ namespace Brickster.BHT
 {
     public class BHT
     {
-        public string UserInfo(int id,string filter)
+        public string UserInfo(int id, string filter)
         {
             //https://brick-hill.trade/api/extension/user/
             var client = new WebClient();
-            var link = client.DownloadString("https://brick-hill.trade/api/extension/user/" + id);
+            var link = client.DownloadString("https://brick-hill.trade/api/extension/user/" + id.ToString()) ;
             BHTPost data = JsonConvert.DeserializeObject<BHTPost>(link);
             //username = usertoIDMethod.Username;
-            if (filter == "value")
-                {
+            switch (filter)
+            {
+                case "value":
                     return data.value;
-                }
-                else if (filter == "average")
-                {
-                    return data.average.ToString();
-                }
-                else if (filter == "rank")
-                {
+                case "average":
+                    return data.average;
+                case "rank":
                     return data.rank;
-                }
-                else if (filter == "specials")
-                {
+                case "specials":
                     return data.specials;
-                }
-            
+
+            }
             return "Invalid Input";
         }
     }

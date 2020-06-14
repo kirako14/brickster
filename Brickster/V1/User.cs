@@ -16,13 +16,30 @@ namespace Brickster.V1
             //https://api.brick-hill.com/v1/user/profile?id=6765
             //gets details of the user.
 
-            string username = "0";
+            //string username = "0";
 
             var client = new WebClient();
             var link = client.DownloadString("https://api.brick-hill.com/v1/user/profile?id=" + userId);
             UserPost usertoIDMethod = JsonConvert.DeserializeObject<UserPost>(link);
-            username = usertoIDMethod.Username;
-            return (username);
+            //username = usertoIDMethod.Username;
+
+            switch (filter)
+            {
+                case "username":
+                    return usertoIDMethod.Username;
+                case "id":
+                    return usertoIDMethod.id.ToString();
+                case "lastonline":
+                    return usertoIDMethod.last_online ;
+                case "creationdate":
+                    return usertoIDMethod.created_at;
+                case "img":
+                    return usertoIDMethod.img;
+
+            }
+
+
+            return "Invalid Input";
         }
 
         public string ToUsername(int userId)

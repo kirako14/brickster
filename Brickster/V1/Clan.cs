@@ -17,25 +17,19 @@ namespace Brickster.V1
             var client = new WebClient();
             var clanInfo = client.DownloadString("https://api.brick-hill.com/v1/clan/clan?id=" + id);
             ClanPost clanMethod = JsonConvert.DeserializeObject<ClanPost>(clanInfo);
-            if(filter == "name")
+
+            switch (filter)
             {
-                return clanMethod.name;
-            }
-            else if (filter == "id")
-            {
-                return clanMethod.id;
-            }
-            if (filter == "creationdate")
-            {
-                return clanMethod.created_at;
-            }
-            if (filter == "tag")
-            {
-                return clanMethod.tag;
-            }
-            if (filter == "title")
-            {
-                return clanMethod.title;
+                case "name":
+                    return clanMethod.name;
+                case "id":
+                    return clanMethod.id.ToString();
+                case "creationdate":
+                    return clanMethod.created_at;
+                case "tag":
+                    return clanMethod.tag;
+                case "title":
+                    return clanMethod.title;
             }
             return "Invalid input";
 
