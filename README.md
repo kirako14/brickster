@@ -1,3 +1,5 @@
+# NOTE: This project is no longer maintained, i have lost the motivation to work on a crappy platform API Wrapper.
+
 ![alt text](https://media.discordapp.net/attachments/719985228805832744/721704602600210501/unknown.png)
 
 
