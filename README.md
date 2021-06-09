@@ -205,10 +205,4 @@ public string rank { get;  set; }
 public string specials { get;  set; }
 ```
 ### Functions of Brick Hill Trade API.
-
----
-# Credits
-
-### Documentation made by Edge.
-### Wrapper made by Boyscout
-### Choco-Client Organization.
+----
